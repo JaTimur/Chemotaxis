@@ -24,7 +24,7 @@ class Firework
     y=300;
     sizeX=10;
     sizeY=10;
-    myColor=myColor((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+    myColor=color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   }
   void move(){
     fill(0,15);
@@ -32,7 +32,7 @@ class Firework
     if(y<=50){
       x=(int)(Math.random()*251);
       y=300;
-      myColor=myColor((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+      myColor=color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
     }
     else{
       x=x+(int)(Math.random()*21)-10;
