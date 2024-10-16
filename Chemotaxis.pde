@@ -18,13 +18,13 @@ void draw()
 }
 class Firework    
 {     
-  int x,y,sizeX,sizeY,Color;
+  int x,y,sizeX,sizeY,myColor;
   Firework(){
     x=(int)(Math.random()*251);
     y=300;
     sizeX=10;
     sizeY=10;
-    Color=color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+    myColor=myColor((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   }
   void move(){
     fill(0,15);
@@ -32,7 +32,7 @@ class Firework
     if(y<=50){
       x=(int)(Math.random()*251);
       y=300;
-      Color=color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+      myColor=myColor((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
     }
     else{
       x=x+(int)(Math.random()*21)-10;
@@ -47,14 +47,14 @@ class Firework
   }
   void show(){
     noStroke();
-    fill(Color);
+    fill(myColor);
     sizeX=10;
     sizeY=10;
     ellipse(x,y,sizeX,sizeY);
     if(y<=50){
       for(int m=0;m<6;m++){
         for(int n=0;n<6;n++){
-          fill(Color,n*2);
+          fill(myColor,n*2);
           sizeX=sizeX+5;
           sizeY=sizeY+5;
           ellipse(x,y,sizeX,sizeY);
