@@ -16,9 +16,6 @@ void draw()
     firework[n].move();
   }
 }
-void mousePressed(){
-  redraw();
-}
 class Firework    
 {     
   int x,y,sizeX,sizeY,Color;
